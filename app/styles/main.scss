@@ -1,0 +1,16 @@
+@import "bootstrap";
+
+// bower:scss
+@import "../bower_components/font-awesome/scss/font-awesome.scss";
+@import "../bower_components/bootstrap/scss/bootstrap.scss";
+// endbower
+
+img#front-cover {
+  border: 1px solid $card-border-color;
+}
+
+footer a, 
+footer a:focus, 
+footer a:hover {
+  color: #fff;
+}

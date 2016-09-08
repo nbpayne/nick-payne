@@ -1,0 +1,11 @@
+{
+  "name": "nickpayne-prototype",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.6.3",
+    "moment": "^2.14.1",
+    "bootstrap": "v4.0.0-alpha.4",
+    "jquery": "^3.1.0"
+  },
+  "devDependencies": {}
+}
