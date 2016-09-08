@@ -59,11 +59,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('fonts', function () {
-    var streamqueue = require('streamqueue');
-    return streamqueue({objectMode: true},
-        $.bowerFiles(),
-        gulp.src('app/fonts/**/*')
-    )
+    return gulp.src(['app/bower_components/font-awesome/fonts/*', 'app/fonts/**/*'])
         .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
         .pipe($.flatten())
         .pipe(gulp.dest('dist/fonts'))
