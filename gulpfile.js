@@ -70,17 +70,23 @@ gulp.task('favicons', function () {
     return gulp.src('app/*.{png,ico,xml,json}')
         .pipe(gulp.dest('dist'))
         .pipe($.size());
-})
+});
+
+gulp.task('misc', function () {
+    return gulp.src('app/CNAME')
+        .pipe(gulp.dest('dist'))
+        .pipe($.size());
+});
 
 gulp.task('clean', function () {
     return gulp.src(['app/styles/main.css', 'dist'], { read: false }).pipe($.clean());
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'favicons']);
-
-gulp.task('default', ['clean'], function () {
-    gulp.start('build');
+gulp.task('build', ['clean'], function () {
+    gulp.start(['html', 'images', 'fonts', 'favicons', 'misc']);
 });
+
+gulp.task('default', ['watch']);
 
 gulp.task('serve', ['styles'], function () {
     browserSync.init(null, {
