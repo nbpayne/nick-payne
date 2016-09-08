@@ -6,6 +6,7 @@ var useref = require('gulp-useref');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var gutil = require('gulp-util');
+var preprocess = require('gulp-preprocess');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
@@ -32,15 +33,13 @@ gulp.task('html', ['styles', 'scripts'], function () {
     var cssFilter = $.filter('**/*.css', { restore: true });
 
     return gulp.src('app/*.html')
-        //.pipe($.useref.assets())
+        .pipe(preprocess({ context: { GA: 'UA-3348634-9' } }))
         .pipe(jsFilter)
         .pipe($.uglify())
         .pipe(jsFilter.restore)
         .pipe(cssFilter)
         .pipe($.csso())
         .pipe(cssFilter.restore)
-        //.pipe($.useref.restore())
-        //.pipe($.useref())
         .pipe(useref())
         .pipe(gulp.dest('dist'))
         .pipe($.size());
