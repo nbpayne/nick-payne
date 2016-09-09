@@ -5,7 +5,6 @@
     <title>Rise Up Like A River &ndash; Nick Payne</title>
     <meta name="description" content="Musically rooted In bluegrass and Americana, Payne’s music crosses borders and blends cultures singing of our scoundrels, pioneers and history; capturing the sparse character of the bush, but bringing an urban, rootsy sensibility very much of the present.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     
 
@@ -16,7 +15,7 @@
 
     <nav class="navbar navbar-dark bg-inverse m-b-2">
       <div class="container">
-        <a class="navbar-brand" href="#">Nick Payne</a>
+        <a class="navbar-brand" href="/">Nick Payne</a>
       </div>
     </nav>
 
@@ -44,7 +43,7 @@
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                   <input type="hidden" name="cmd" value="_s-xclick">
                   <input type="hidden" name="hosted_button_id" value="DJHJW6ML8ESMQ">
-                  <button class="btn btn-primary">Buy now $25 <i class="fa fa-paypal" aria-hidden="true"></i></button>
+                  <button class="btn btn-primary" onclick="trackEvent('outbound', 'click', '/paypal/TOU3')">Buy now $25 <i class="fa fa-paypal" aria-hidden="true"></i></button>
                   <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
                 </form>
                 <!-- /PayPal Button -->
@@ -64,7 +63,7 @@
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                   <input type="hidden" name="cmd" value="_s-xclick">
                   <input type="hidden" name="hosted_button_id" value="Z3XH9L9L3JUHY">
-                  <button class="btn btn-primary">Buy now $50 <i class="fa fa-paypal" aria-hidden="true"></i></button>
+                  <button class="btn btn-primary" onclick="trackEvent('outbound', 'click', '/paypal/TOU3+CAP')">Buy now $50 <i class="fa fa-paypal" aria-hidden="true"></i></button>
                   <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
                 </form>
                 <!-- /PayPal Button -->
@@ -96,7 +95,7 @@
                       <option value="Extra-Extra-Large (XXL)">Extra-Extra-Large (XXL) </option>
                     </select>
                   </div>
-                  <button class="btn btn-primary">Buy now $50 <i class="fa fa-paypal" aria-hidden="true"></i></button>                  
+                  <button class="btn btn-primary" onclick="trackEvent('outbound', 'click', '/paypal/TOU3+TSHIRT')">Buy now $50 <i class="fa fa-paypal" aria-hidden="true"></i></button>                  
                   <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
                 </form>
                 <!-- /PayPal Button -->
@@ -117,35 +116,13 @@
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                   <input type="hidden" name="cmd" value="_s-xclick">
                   <input type="hidden" name="hosted_button_id" value="67W553ZRMUTJU">
-                  <button class="btn btn-primary">Buy now $45 <i class="fa fa-paypal" aria-hidden="true"></i></button>
+                  <button class="btn btn-primary" onclick="trackEvent('outbound', 'click', '/paypal/TOU3+TOU1')">Buy now $45 <i class="fa fa-paypal" aria-hidden="true"></i></button>
                   <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
                 </form>
                 <!-- /PayPal Button -->
               </div>
             </div>
           </div>
-
-          <!--
-          <h2 id="video">Video</h2>
-          <div class="card">
-            <div class="card-img-top embed-responsive embed-responsive-16by9">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/Mar3FxUWqH0?rel=0" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="card-block">
-              <h4 class="card-title">Old Sydney Town</h4>
-              <p class="card-text">Official video clip for the song <em>Old Sydney Town</em>.</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-img-top embed-responsive embed-responsive-16by9">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/eeyjtwKAJiE?list=PLB-WL9H_OUnVdsG-UEzIV5IJEMUHlGSP9" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="card-block">
-              <h4 class="card-title">Introducing... Rise Up Like A River</h4>
-              <p class="card-text">Playlist featuring introductions to five songs off the album <em>Rise Up Like A River</em>.</p>
-            </div>
-          </div>
-          -->
 
         </div>
       </div>
@@ -224,12 +201,6 @@
     </script>
 
     <script>
-      /**
-      * Function that tracks a click on an outbound link in Analytics.
-      * This function takes a valid URL string as an argument, and uses that URL string
-      * as the event label. Setting the transport method to 'beacon' lets the hit be sent
-      * using 'navigator.sendBeacon' in browser that support it.
-      */
       var trackEvent = function(category, action, url) {
          ga('send', 'event', category, action, url, {
            'transport': 'beacon'
