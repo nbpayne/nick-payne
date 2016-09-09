@@ -188,7 +188,7 @@
             Gigs
           </h3>
           <dl id="gigs-summary"></dl>
-          <p class="text-xs-right"><a target="_blank" href="http://www.dearorphans.com/gigs/">... See all our gigs</a></p>
+          <p class="text-xs-right"><a target="_blank" href="http://www.dearorphans.com/gigs/" onclick="trackEvent('outbound', 'click', '/dearorphans/gigs')">... See all our gigs</a></p>
         </div>
       </div>
 
@@ -198,8 +198,8 @@
       <div class="container">
         <div class="row p-t-1">
           <div class="col-md-6">
-            <p>Find out even more at <a target="_blank" href="http://www.dearorphans.com">www.dearorphans.com</a>.<br>
-            Get in contact at <a target="_blank" href="http://www.dearorphans.com/contact/">www.dearorphans.com/contact</a>
+            <p>Find out even more at <a target="_blank" href="http://www.dearorphans.com" onclick="trackEvent('outbound', 'click', '/dearorphans')">www.dearorphans.com</a>.<br>
+            Get in contact at <a target="_blank" href="http://www.dearorphans.com/contact/" onclick="trackEvent('outbound', 'click', '/dearorphans/contact')">www.dearorphans.com/contact</a>
             <p>
               <i class="fa fa-facebook-square"></i> &nbsp; 
               <a href="http://www.facebook.com/dearorphans" target="_blank">www.facebook.com/dearorphans</a><br>
@@ -226,6 +226,20 @@
       ga('create', '<!-- @echo GA -->', 'auto');
       ga('send', 'pageview');
 
+    </script>
+
+    <script>
+      /**
+      * Function that tracks a click on an outbound link in Analytics.
+      * This function takes a valid URL string as an argument, and uses that URL string
+      * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+      * using 'navigator.sendBeacon' in browser that support it.
+      */
+      var trackEvent = function(category, action, url) {
+         ga('send', 'event', category, action, url, {
+           'transport': 'beacon'
+         });
+      }
     </script>
 
     <!-- build:js scripts/vendor.js -->
