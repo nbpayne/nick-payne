@@ -59,7 +59,7 @@ gulp.task('images', function () {
 
 gulp.task('fonts', function () {
     return gulp.src(['app/bower_components/font-awesome/fonts/*', 'app/fonts/**/*'])
-        .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
+        .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
         .pipe($.flatten())
         .pipe(gulp.dest('dist/fonts'))
         .pipe($.size());
