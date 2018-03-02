@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<header>
+  {% include header.html %}
+</header>
+<section class="container">
+  <div class="row">
+    <div class="col">
+      <h3 class="text-muted">{{ page.title }}</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-lg-8">
+      <div class="pagetron">
+        <h1 class="pagetron-heading display-4">{{ page.heading }}</h1>
+        <picture>
+          <source media="(min-width: 576px)" srcset="{{ page.image }}">
+          <img class="img-fluid w-100" src="{{ page.image }}">
+        </picture>
+      </div>
+      {{ content }}
+    </div>
+    <div class="col-sm-12 col-lg-4">
+      {% include aside.html %}
+    </div>
+  </div>
+</section>

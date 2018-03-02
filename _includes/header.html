@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="{{ site.baseurl }}/">Nick Payne</a>
+  <button id="nav-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{{ site.baseurl }}/">Home</span></a>  <!-- <span class="sr-only">(current) -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ site.baseurl }}/blog/">Blog</a>
+      </li>
+      {% for page in site.pages %}
+        {% if page.title %}
+          {% if page.display_in_nav %}
+      <li class="nav-item">
+        <a class="nav-link" href="{{ page.url | site.baseurl }}">{{ page.title}}</a>
+      </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      <li class="nav-item">
+        <a class="nav-link icon-link" target="_blank" href="{{ site.facebook }}"><i class="fab fa-lg fa-facebook-square"></i></a>
+        <a class="nav-link icon-link" target="_blank" href="{{ site.instagram }}"><i class="fab fa-lg fa-instagram"></i></a>
+        <a class="nav-link icon-link" target="_blank" href="{{ site.spotify }}"><i class="fab fa-lg fa-spotify"></i></a>
+        <a class="nav-link icon-link" target="_blank" href="{{ site.songkick }}"><i class="songkick icon-songkick"></i></a>
+        <a class="nav-link icon-link" target="_blank" href="{{ site.youtube }}"><i class="fab fa-lg fa-youtube-square"></i></a>
+      </li>
+    </ul>
+  </div>
+</nav>

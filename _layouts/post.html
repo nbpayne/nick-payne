@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<header>
+  {% include header.html %}
+</header>
+<section class="container">
+  <div class="row">
+    <div class="col">
+      <h3 class="text-muted">Blog</h3>
+      <p>{{ page.date | date: "%B %d, %Y" }} | {{ page.author }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-lg-8">
+      <div class="pagetron">
+        <h1 class="pagetron-heading display-4">{{ page.heading }}</h1>
+        <picture>
+          <source media="(min-width: 576px)" srcset="{{ page.image }}">
+          <img class="img-fluid w-100" src="{{ page.image }}">
+        </picture>
+      </div>
+      {{ content }}
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          {% if page.next %}
+          <li class="page-item">
+            <a class="page-link" href="{{ page.next.url | prepend: site.baseurl }}" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          {% else %}
+          <li class="page-item disabled">
+            <span class="page-link" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </span>
+          </li>
+          {% endif %}
+          {% if page.previous %}
+          <li class="page-item">
+            <a class="page-link" href="{{ page.previous.url | prepend: site.baseurl }}" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+          {% else %}
+          <li class="page-item disabled">
+            <span class="page-link" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </span>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+    <div class="col-sm-12 col-lg-4">
+      {% include aside.html %}
+    </div>
+  </div>
+</section>
