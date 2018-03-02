@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Biography
+title: Home
 heading: "Rise Up Like A River"
 subheading: "When the rain starts to fall, and the snow comes to drift."
 ---
