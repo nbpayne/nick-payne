@@ -16,8 +16,12 @@
 title: Nick Payne
 email: nick@nickpayne.com
 description: > # this means to ignore newlines until "baseurl:"
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum 
-  magna feugiat nibh venenatis hendrerit.
+  Sydney alt-bluegrass troubadour Nick Payne might have remained a weekend picker with a drawer full of songs, but the 
+  stars aligned when a move back to Sydney after working around Australia coincided with an impulse purchase of his 
+  dream guitar (a Martin D28). A friend turned him on to Ryan Adams _Heartbreaker_ album, and Nick Payne discovered to 
+  his surprise that he was a country music fan. With a new musical direction and a wellspring of creativity, drawing 
+  inspiration from the traditional and modern Americana canon, as well as Australian alt-country and roots, he returned 
+  to performing, playing and writing with renewed focus.
 baseurl: # the subpath of your site, e.g. /blog
 url: 'http://www.nickpayne.com' # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -36,6 +40,7 @@ paginate_path: "/blog/page-:num/"
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 exclude:
   - bower_components
   - bower.json
