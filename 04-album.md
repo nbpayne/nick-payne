@@ -2,7 +2,7 @@
 layout: page
 title: Album
 heading: "Rise Up Like A River"
-image: 'https://www.instagram.com/p/BIq4Owkhvh9/media/?size=l'
+image: /images/album.jpg
 permalink: /album/
 display_in_nav: true
 ---
