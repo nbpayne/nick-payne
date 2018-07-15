@@ -14,7 +14,7 @@ Here's some quotes, and high-resolution images to make your lives easy.
 
 ## Biography
 
-- [Nick Payne (53KB PDF)](/files/Nick-Payne-BIO.pdf){: target="_blank" }
+- [Nick Payne (94KB PDF)](/files/Nick-Payne-BIO.pdf){: target="_blank" }
 
 ## Press
 
