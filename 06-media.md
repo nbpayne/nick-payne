@@ -41,6 +41,7 @@ High-resolution, print-ready photos.
 
 ### Landscape
 
+<div class="text-left">
 {% include card-image.html 
     title="Nick Payne &ndash; Landscape #1"
     image="Nick-Payne-PRINT-01.jpg"
@@ -59,6 +60,19 @@ High-resolution, print-ready photos.
     size="170kB"
 %}
 
+{% include card-image.html 
+    title="Nick Payne &ndash; Landscape #4"
+    image="Nick-Payne-PRINT-05.jpg"
+    size="229kB"
+%}
+
+{% include card-image.html 
+    title="Nick Payne and Katie Brianna &ndash; Landscape #5"
+    image="Nick-Payne-PRINT-06.jpg"
+    size="345kB"
+%}
+</div>
+
 ## Album artwork
 
 High-resolution, album and single artwork.
@@ -67,6 +81,13 @@ High-resolution, album and single artwork.
     title="Rise Up Like A River"
     image="Rise-Up-Like-A-River-2016.jpg"
     size="290kB"
+%}
+
+<div class="text-left">
+{% include card-image.html 
+    title="My Darling Kate"
+    image="My-Darling-Kate-2018.jpg"
+    size="479kB"
 %}
 
 {% include card-image.html 
@@ -81,10 +102,16 @@ High-resolution, album and single artwork.
     image="Old-Sydney-Town-2015.jpg"
     size="140kB"
 %}
+</div>
 
 ## Download music
 
 Download recent singles to play on radio.
+
+The third single from Nick's album -- *My Darling Kate*
+
+{% include downloads/my-darling-kate.html %}
+{: .text-center }
 
 The second single from Nick's upcoming solo album -- *Rising River*.
 

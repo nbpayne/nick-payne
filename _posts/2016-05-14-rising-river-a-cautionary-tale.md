@@ -46,7 +46,7 @@ Download my previous song *Old Sydney Town* for free now -- click the button.
 #### Production
 
 **Production:** Nick Payne, Lyn Taylor  
-**Mixing:** Glenn Santry – Heartbeat Studios
+**Mixing:** Glenn Santry -- Heartbeat Studios
 
 #### Musicians
 

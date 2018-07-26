@@ -7,6 +7,12 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+// @include media-breakpoint-up(lg) {
+  body {
+    text-align: justify;
+  }
+// }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Oswald, sans-serif;
   text-transform: uppercase;
@@ -20,7 +26,13 @@ header {
   background-position: center;
   background-size: cover;
   color: #fff;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+@include media-breakpoint-up(lg) {
+  header {
+    margin-bottom: 2rem;
+  }
 }
 
 .darken {
@@ -160,6 +172,16 @@ footer {
 }
 
 // Elements
+.blockquote {
+  border-left: 0.25rem solid #ccc;
+  padding-left: 1rem;
+  text-align: left;
+}
+
+.card {
+  border-radius: 0;
+}
+
 .citation {
   color: $text-muted;
   font-style: italic;
@@ -173,6 +195,12 @@ footer {
   margin-bottom: 1rem;
 }
 
-.card {
-  border-radius: 0;
+.embed-responsive {
+  margin-bottom: 1rem;
+}
+
+@include media-breakpoint-up(lg) {
+  .embed-responsive-1by1 {
+    margin-bottom: 0;
+  }
 }
