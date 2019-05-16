@@ -6,13 +6,12 @@ var del = require('del');
 var gulpif = require('gulp-if');
 // var imagemin = require('gulp-imagemin');
 var jshint = require('gulp-jshint');
-var gulputil = require('gulp-util');
+// var gulputil = require('gulp-util');
 var lazypipe = require('lazypipe');
 var log = require('gutil-color-log');
 var merge = require('merge-stream');
 // var pngquant = require('imagemin-pngquant');
 var rename = require('gulp-rename');
-var runsequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var stylish = require('csslint-stylish');
@@ -56,9 +55,10 @@ gulp.task('css', function () {
 });
 
 // Copy font files into `fonts` directory
-gulp.task('fonts', function () {
+gulp.task('fonts', function (done) {
   gulp.src(['_fonts/*.*','bower_components/font-awesome/web-fonts-with-css/webfonts/*.*'])
     .pipe(gulp.dest('fonts'));
+  done();
 });
 
 // Run `jekyll serve`
@@ -98,8 +98,8 @@ gulp.task('js', function () {
 // Watch for file changes
 gulp.task('watch', function () {
   // Watch files
-  gulp.watch('__sass/**/*.scss', ['css']);
-  gulp.watch(['__includes/*.html', '__js/**/*.js'], ['js']);
+  gulp.watch('__sass/**/*.scss', gulp.series('css'));
+  gulp.watch(['__includes/*.html', '__js/**/*.js'], gulp.series('js'));
 });
 
 // Wire bower dependencies
@@ -116,13 +116,13 @@ gulp.task('wiredep', function() {
 // - serve: compile all assets, and start jekyll
 // --------------------------------------------------------------------------------------------------------------------
 
-gulp.task('default', ['serve']);
-
-gulp.task('serve', function () {
-  runsequence(
+gulp.task('serve', 
+  gulp.series(
     'clean', 
-    ['css', 'fonts', 'wiredep'], 
+    gulp.parallel('css', 'fonts', 'wiredep'), 
     'js',
-    ['jekyll-serve', 'watch']
-  );
-});
+    gulp.parallel('jekyll-serve', 'watch')
+  )
+);
+
+gulp.task('default', gulp.series('serve'));
