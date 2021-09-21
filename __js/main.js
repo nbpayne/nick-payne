@@ -12,7 +12,7 @@ $('#navbarSupportedContent').on('hide.bs.collapse', function () {
 
 // Get Songkick gigs
 $.getJSON(
-  'http://api.songkick.com/api/3.0/artists/mbid:e794939d-318d-47af-b253-2994d09330da/calendar.json?apikey=hRGXicugpn2NSNFF',
+  'https://api.songkick.com/api/3.0/artists/mbid:e794939d-318d-47af-b253-2994d09330da/calendar.json?apikey=hRGXicugpn2NSNFF',
   renderGigs
 )
 
