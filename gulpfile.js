@@ -12,7 +12,7 @@ var log = require('gutil-color-log');
 var merge = require('merge-stream');
 // var pngquant = require('imagemin-pngquant');
 var rename = require('gulp-rename');
-var sass = require('gulp-sass')(require('node-sass'));
+var sass = require('gulp-sass')(require('sass'));
 var sourcemaps = require('gulp-sourcemaps');
 var stylish = require('csslint-stylish');
 var uglify = require('gulp-uglify');
@@ -56,7 +56,7 @@ gulp.task('css', function () {
 
 // Copy font files into `fonts` directory
 gulp.task('fonts', function (done) {
-  gulp.src(['_fonts/*.*','bower_components/font-awesome/web-fonts-with-css/webfonts/*.*'])
+  gulp.src(['_fonts/*.*','bower_components/font-awesome/webfonts/*.*'])
     .pipe(gulp.dest('fonts'));
   done();
 });

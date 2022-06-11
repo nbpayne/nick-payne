@@ -20,7 +20,7 @@
     "jshint-stylish": "^2.2.1",
     "lazypipe": "^1.0.1",
     "merge-stream": "^1.0.1",
-    "node-sass": "^6.0.1",
+    "sass": "^1.49.7",
     "wiredep": "^4.0.0"
   },
   "dependencies": {}

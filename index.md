@@ -38,7 +38,7 @@ subheading: "When the rain starts to fall, and the snow comes to drift."
   <section class="row">
     <div class="col-sm-12 col-md">
       <h2>Tour Dates</h2>
-      <p>No upcoming dates.</p>
+      <dl class="gigs"></dl>
       <p>Stay tuned via <a target="_blank" href="https://www.songkick.com/artists/1679689-nick-payne">Songkick</a></p>
     </div>
     <div class="col-sm-12 col-md">

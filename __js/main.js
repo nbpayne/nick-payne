@@ -21,12 +21,12 @@ function renderGigs(data) {
   var events = data.resultsPage.results.event;
   if(events.length) {
     for (var i = events.length - 1; i >= 0; i--) {
-      $('#gigs').append(
+      $('dl.gigs').append(
         '<dt>' + moment(events[i].start.date).format('MMM Do, YYYY') + '</dt>' +
         '<dd><a href="/tour/">' + events[i].displayName + '</a></dd>'
       );
     }  
   } else {
-    $('#gigs').replaceWith('<p>No upcoming dates</p>');
+    $('dl.gigs').replaceWith('<p>No upcoming dates</p>');
   }
 }

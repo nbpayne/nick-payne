@@ -1,19 +1,23 @@
 /*!
- * Font Awesome Free 5.0.6 by @fontawesome - http://fontawesome.com
- * License - http://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2022 Fonticons, Inc.
  */
+// Font Awesome core compile (Web Fonts-based)
+// -------------------------
 
 $fa-font-path:   "../../fonts";
-@import 'bower_components/font-awesome/web-fonts-with-css/scss/variables';
-@import 'bower_components/font-awesome/web-fonts-with-css/scss/mixins';
-@import 'bower_components/font-awesome/web-fonts-with-css/scss/core';
-@import 'bower_components/font-awesome/web-fonts-with-css/scss/larger';
-@import 'bower_components/font-awesome/web-fonts-with-css/scss/fixed-width';
-@import 'bower_components/font-awesome/web-fonts-with-css/scss/list';
-@import 'bower_components/font-awesome/web-fonts-with-css/scss/bordered-pulled';
-@import 'bower_components/font-awesome/web-fonts-with-css/scss/animated';
-@import 'bower_components/font-awesome/web-fonts-with-css/scss/rotated-flipped';
-@import 'bower_components/font-awesome/web-fonts-with-css/scss/stacked';
-@import 'bower_components/font-awesome/web-fonts-with-css/scss/icons';
-@import 'bower_components/font-awesome/web-fonts-with-css/scss/screen-reader';
-@import 'bower_components/font-awesome/web-fonts-with-css/scss/fa-brands.scss';
+@import 'bower_components/font-awesome/scss/_functions';
+@import 'bower_components/font-awesome/scss/_variables';
+@import 'bower_components/font-awesome/scss/_mixins';
+@import 'bower_components/font-awesome/scss/_core';
+@import 'bower_components/font-awesome/scss/_sizing';
+@import 'bower_components/font-awesome/scss/_fixed-width';
+@import 'bower_components/font-awesome/scss/_list';
+@import 'bower_components/font-awesome/scss/_bordered-pulled';
+@import 'bower_components/font-awesome/scss/_animated';
+@import 'bower_components/font-awesome/scss/_rotated-flipped';
+@import 'bower_components/font-awesome/scss/_stacked';
+@import 'bower_components/font-awesome/scss/_icons';
+@import 'bower_components/font-awesome/scss/_screen-reader';
+@import 'bower_components/font-awesome/scss/brands';
