@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Home
+title: Australian Americana Musician Nick Payne
 heading: "Rise Up Like A River"
 subheading: "When the rain starts to fall, and the snow comes to drift."
 ---
